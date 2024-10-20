@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.navbar {
+			overflow: hidden;
+			background-color: #333;
+		}
+
+		.navbar a {
+			float: left;
+			font-size: 16px;
+			color: white;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: none;
+		}
+
+		.dropdown {
+			float: left;
+			overflow: hidden;
+		}
+
+		.dropdown .dropbtn {
+			font-size: 16px;
+			border: none;
+			outline: none;
+			color: white;
+			padding: 14px 16px;
+			background-color: inherit;
+			font-family: inherit;
+			margin: 0;
+		}
+
+		.navbar a:hover,
+		.dropdown:hover .dropbtn {
+			background-color: red;
+		}
+
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #f9f9f9;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			float: none;
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #ddd;
+		}
+
+		.dropdown:hover .dropdown-content {
+			display: block;
+		}
+
+		th,
+		td {
+			border: 1px solid black;
+			text-align: center;
+		}
+	</style>
+</head>
+<div class="navbar">
+	<h2 style="color:white; text-align:center;"> Astronomy Picture of the Day and MARS Rover Photos</h2>
+</div>
+<br />
+
+<body style="background-color:white;">
+
+	<div class="navbar">
+
+		<a href="#home">Home</a>
+		<div class="dropdown">
+			<button class="dropbtn">Astronomy Picture of the Day (APOD)
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="/nasa/api/apod">APOD by Date</a>
+				<a href="/nasa/api/apod/random">Random APOD</a>
+				<a href="/nasa/api/apod/range">APOD by Date Range</a>
+			</div>
+		</div>
+		<a href="/nasa/mars/photos">MARS Rover Photos</a>
+	</div><br /><br />
+	<table style="width:100%">
+		<tr>
+			<th>
+				<p>Explore the wonders of the universe! This site brings you NASA's Astronomy Picture of the Day (APOD)
+					& MARS Rover Photos, stunning daily images with fascinating explanations from astronomers.
+			</th>
+		</tr>
+	</table><br /><br />
+	<table style="width:80%">
+		<tr>
+			<th>Name</th>
+			<th>Endpoint</th>
+			<th>Description</th>
+		</tr>
+		<tr>
+			<td>APOD by Date</td>
+			<td>/nasa/api/apod</td>
+			<td>View APOD by specifying date</td>
+		</tr>
+		<tr>
+			<td>Random APOD</td>
+			<td>/nasa/api/apod/random</td>
+			<td>View a random APOD</td>
+		</tr>
+		<tr>
+			<td>APOD by Date Range</td>
+			<td>/nasa/api/apod/range</td>
+			<td>View APODs for a Date Range</td>
+		</tr>
+		<tr>
+			<td>MARS Rover Photos</td>
+			<td>/nasa/mars/photos</td>
+			<td>View photos by 3 different MARS Rovers taken from different cameras</td>
+		</tr>
+	</table>
+
+</body>
+
+
+</html>
