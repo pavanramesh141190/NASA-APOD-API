@@ -33,3 +33,32 @@ Verification Steps:
 Once the application starts, you should see log messages in the terminal or console of IDE indicating that it's running.
 Open any web browser and access the application at the URL - http://localhost:8080/home.html
 
+Design Decisions
+1. I have created one static HTML page for homepage(landing page).
+2. I have created HTML pages one for taking user input and another page for showing the response for each feature.
+3. I have used simple CSS within HTML code for the UI. UI is kept simple and easy to use.
+4. The application is built on Java Spring boot with JDK 17 and Spring boot version 3 and using Spring Tool Suite IDE.
+5. The code is packaged as below:
+- Controller (com.nasa.NasaDemo.controller)
+- Bean (com.nasa.NasaDemo.bean)
+- Utility (com.nasa.NasaDemo.utility)
+- HTML pages
+6. RestTemplate for consuming API provided by NASA API.
+7. Thymeleaf for displaying response on front-end. This framework makes code simple and easy integration.
+8. Jackson Library for parsing JSON to Java Object. This library provides an easier way to bind data i.e to convert JSON to Java object and vice-versa.
+
+Assumptions
+1. The user has basic knowledge of Java to do setup and run the application
+2. The user can understand the instructions given on the application to use the features.
+3. The NASA API always provides JSON response
+4. The data and photo is present for the dates the user is providing input
+
+Ideas to Improvement
+1. Provide pagination for APOD by Date Range and MARS Rover Photos API
+2. More filtering options for MARS Rover Photos API
+3. Make the webpages responsive
+4. Filter the drop-downs based on selection in MARS Rover page
+5. Provide more navigation buttons in UI with visual improvements
+6. Implement loggers in code
+7. Autowiring of RestTemplate
+
